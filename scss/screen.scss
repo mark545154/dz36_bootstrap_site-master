@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+$primary-color:#0776A0;
+$text-nav-color:#FFB573;
+$fon-color:#f4f4f4;
+$over-color:rgba(255, 255, 255, 0.5);
+$fon-color-doctor:#FF7800;
+$button-color:#3AA6D0;
+$fon-photo-color:rgba(83, 107, 246, 0.11);
+$font-stack:"Raleway", serif;
+
+body {
+  font-family: $font-stack;
+}
+//navbar START
+.navbar {
+  background-color: $primary-color;
+  .nav-link, .navbar-brand {
+    color: $text-nav-color;
+  }
+  .nav-link {
+    &:hover {
+      background-color: $fon-color;
+      color: $primary-color;
+    }
+  }
+}
+//navbar END
+
+//header START
+.header {
+  height: 100vh;
+  background: url("../images/baner.jpg") no-repeat center/cover;
+  .overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: $over-color;
+  }
+  .description {
+    position: absolute;
+    top: 30%;
+    width: 50%;
+    h1 {
+      color: $primary-color;
+    }
+    p {
+      color: $fon-color-doctor;
+      line-height: 2rem;
+      font-size: 1.2rem;
+      width: 70%;
+    }
+    a {
+      border-color: $primary-color;
+      color: $fon-color-doctor;
+      &:hover {
+        background-color: $primary-color;
+        color: $fon-color;
+      }
+    }
+  }
+}
+//header END
+
+%about-shared {
+  h1 {
+    color: $primary-color;
+  }
+}
+.about {
+  @extend %about-shared;
+}
+.portfolio {
+  @extend %about-shared;
+}
+.team {
+  @extend %about-shared;
+}
+//about START
+.about {
+  hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  }
+  .border-left {
+    border-left: 4px solid $primary-color!important;
+  }
+}
+//about END
+
+//team START
+.team__item {
+  &:hover .team__description {height: 85%;
+    border-top-right-radius: 0%;
+    background-color: rgba(83, 107, 246, 0.11);
+  }
+  &:hover .team__description-user {
+    display: none;
+  }
+  .team__description {
+    background-color: $primary-color;
+    color: $fon-color;
+    text-align: center;
+    border-top-right-radius: 93%;
+    transition: 0.7s ease-in-out;
+    position: absolute;
+    width: 90%;
+    bottom: 24px;
+    .team__description-user {
+      position: relative;
+      right: 20%;
+      top: 10px;
+    }
+    .team__description-title {
+      display: none;
+      position: absolute;
+      top: 30%;
+    }
+  }
+  &:hover .team__description-title {
+    display: block;
+    color: $fon-color-doctor;
+    font-weight: bold;
+  }
+}
+//team END
+
+//contact START
+.contact {
+  input[type=submit] {
+    background-color: $button-color!important;
+  }
+}
+//contact END
+
+//request more 992px START
+@media screen and (max-width: 992px) {
+  .header {
+    .description {
+      height: 100vh;
+      width: auto;
+
+      p {
+        line-height: 1.8rem;
+        text-align: justify;
+        width: 90%;
+      }
+    }
+  }
+  .team__item {
+    .team__description-title {
+      line-height: 1rem;
+      font-size: .7rem;
+      width: 96%;
+      top: 20%;
+    }
+
+  }
+}
+//request more 992px END
+
+//request more 768px START
+@media screen and (max-width: 768px){
+  .header {
+    .description {
+      height: 100vh;
+      width: auto;
+      line-height: 0.3rem;
+    }
+  }
+  .about {
+    .border-left {
+      border-left: none!important;
+    }
+  }
+  .team__item {
+    .team__description-title {
+      line-height: .5rem;
+    }
+  }
+}
+//request more 768px END
+
+//request more 480px START
+@media screen and (max-width: 480px) {
+  .header {
+    height: 100vh;
+    width: auto;
+    .description {
+      h1 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+//request more 480px END

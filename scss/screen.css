@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+body {
+  font-family: "Raleway", serif; }
+
+.navbar {
+  background-color: #0776A0; }
+  .navbar .nav-link, .navbar .navbar-brand {
+    color: #FFB573; }
+  .navbar .nav-link:hover {
+    background-color: #f4f4f4;
+    color: #0776A0; }
+
+.header {
+  height: 100vh;
+  background: url("../images/baner.jpg") no-repeat center/cover; }
+  .header .overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .header .description {
+    position: absolute;
+    top: 30%;
+    width: 50%; }
+    .header .description h1 {
+      color: #0776A0; }
+    .header .description p {
+      color: #FF7800;
+      line-height: 2rem;
+      font-size: 1.2rem;
+      width: 70%; }
+    .header .description a {
+      border-color: #0776A0;
+      color: #FF7800; }
+      .header .description a:hover {
+        background-color: #0776A0;
+        color: #f4f4f4; }
+
+.about h1, .portfolio h1, .team h1 {
+  color: #0776A0; }
+
+.about hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
+.about .border-left {
+  border-left: 4px solid #0776A0 !important; }
+
+.team__item:hover .team__description {
+  height: 85%;
+  border-top-right-radius: 0%;
+  background-color: rgba(83, 107, 246, 0.11); }
+.team__item:hover .team__description-user {
+  display: none; }
+.team__item .team__description {
+  background-color: #0776A0;
+  color: #f4f4f4;
+  text-align: center;
+  border-top-right-radius: 93%;
+  transition: 0.7s ease-in-out;
+  position: absolute;
+  width: 90%;
+  bottom: 24px; }
+  .team__item .team__description .team__description-user {
+    position: relative;
+    right: 20%;
+    top: 10px; }
+  .team__item .team__description .team__description-title {
+    display: none;
+    position: absolute;
+    top: 30%; }
+.team__item:hover .team__description-title {
+  display: block;
+  color: #FF7800;
+  font-weight: bold; }
+
+.contact input[type=submit] {
+  background-color: #3AA6D0 !important; }
+
+@media screen and (max-width: 992px) {
+  .description {
+    width: auto;
+    margin: 0 auto; }
+    .description p {
+      line-height: 1.8rem;
+      text-align: justify;
+      width: 90%; }
+
+  .team__item .team__description-title {
+    line-height: 1rem;
+    font-size: .7rem;
+    width: 96%;
+    top: 20%; } }
+@media screen and (max-width: 768px) {
+  .description {
+    width: auto;
+    line-height: 1rem; }
+
+  .about .border-left {
+    border-left: none !important; }
+
+  .team__item .team__description-title {
+    line-height: .5rem; } }
+@media screen and (max-width: 480px) {
+  .description > h1 {
+    font-size: 2rem; } }
+
+/*# sourceMappingURL=screen.css.map */
